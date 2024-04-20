@@ -1,0 +1,31 @@
+import { Meta } from '@storybook/blocks'
+import * as IconModule from '../icons'
+import IconsView from '../svgs/IconsView'
+import Code from './assets/code-brackets.svg'
+import Colors from './assets/colors.svg'
+import Comments from './assets/comments.svg'
+import Direction from './assets/direction.svg'
+import Flow from './assets/flow.svg'
+import Plugin from './assets/plugin.svg'
+import Repo from './assets/repo.svg'
+import StackAlt from './assets/stackalt.svg'
+
+<Meta title="Guidelines/Icons" />
+
+Lets say you have a .svg file that you want to use as an icon. Copy the .svg file to src/svgs/assets
+
+and then run 
+
+`yarn gen-icons`
+
+This will generate all Icons as react component in src/icons/ . We need to create a new release with the new icons to use it and aftet which you can use it like the following
+
+```js
+import { Icons8Adobe } from '@TRCSolutions/captures2-ui'
+
+<Icons8Adobe stroke="#eeeeee" width="1rem" height="1rem" />
+
+// Click on the icon to copy the code to the clipboard.
+```
+
+<IconsView />

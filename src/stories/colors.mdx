@@ -1,0 +1,83 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';
+import * as colors from '../constants/colors'
+
+<Meta title="Guidelines/Colors and Styling" />
+
+
+Please use the following guidelines when styling your components.
+
+Use material ui styles to style your components. This will ensure that your components are consistent with the rest of the design system.
+
+Please do not use scss variables / Please avoid scss in general
+
+**Colors** are a key part of any design system. They are used to create visual hierarchy and group elements together based on their color.
+
+```js
+import * as colors from '../constants/colors'
+
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles({
+  root: {
+    color: colors.BLACK,
+    backgroundColor: colors.WHITE,
+  },
+});
+
+// You can also use the values in your theme
+import { createMuiTheme } from '@material-ui/core/styles';
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: colors.PRIMARY,
+    },
+    secondary: {
+      main: colors.SECONDARY,
+    },
+    error: {
+      main: colors.ERROR,
+    },
+    warning: {
+      main: colors.WARN,
+    },
+    success: {
+      main: colors.SUCCESS,
+    },
+  },
+});
+```
+
+
+<ColorPalette>
+  <ColorItem 
+    title="colors.BLACK" 
+    subtitle="Black" 
+    colors={{ BLACK: colors.BLACK, WHITE : colors.WHITE }} 
+  />
+   <ColorItem 
+    title="colors.PRIMARY" 
+    subtitle="Primary" 
+    colors={{ PRIMARY: colors.PRIMARY }} 
+  />
+   <ColorItem 
+    title="colors.SECONDARY" 
+    subtitle="Secondary" 
+    colors={{ SECONDARY: colors.SECONDARY }} 
+  />
+   <ColorItem 
+    title="colors.SUCCESS" 
+    subtitle="Success" 
+    colors={{ SUCCESS: colors.SUCCESS }} 
+  />
+   <ColorItem 
+    title="colors.ERROR" 
+    subtitle="Error" 
+    colors={{ ERROR: colors.ERROR }} 
+  />
+   <ColorItem 
+    title="colors.WARN" 
+    subtitle="Warning" 
+    colors={{ WARN: colors.WARN }} 
+  />
+</ColorPalette>
